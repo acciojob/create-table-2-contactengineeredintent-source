@@ -7,7 +7,7 @@ let columns = 0;
 createTableBtn.addEventListener("click", () => {
   rows = prompt("Input number of rows");
   columns = prompt("Input number of columns");
-  if(rows < 0 || columns < 0 || row == 0 || colummns == 0){
+  if(rows < 0 || columns < 0 || row == 0 || columns == 0){
     return alert("wrong input");
   }
   if((rows >= 'a' && rows <= 'z') || (rows >= 'A' && rows <= 'Z ')){
