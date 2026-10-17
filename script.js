@@ -10,8 +10,10 @@ createTableBtn.addEventListener("click", () => {
   if(rows < 0 || columns < 0){
     return alert("wrong input");
   }
+  if((rows >= '0' && rows <= '9')&&(columns >= '0' && columns <= '9')){
   createTable(rows, columns);
   createTableBtn.remove();
+  }
 });
 
 function createTable(rows, columns) {
