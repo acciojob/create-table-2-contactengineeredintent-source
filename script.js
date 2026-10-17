@@ -7,14 +7,21 @@ let columns = 0;
 createTableBtn.addEventListener("click", () => {
   rows = prompt("Input number of rows");
   columns = prompt("Input number of columns");
-  if(rows < 0 || columns < 0 || rows == 0 || columns == 0){
+  if (rows < 0 || columns < 0 || rows == 0 || columns == 0) {
+    return alert("wrong input");
+  } else if (
+    (rows != null &&
+      rows.length > 0 &&
+      [...rows].every((ch) => ch >= "0" && ch <= "9")) ||
+    (columns != null &&
+      columns.length > 0 &&
+      [...columns].every((ch) => ch >= "0" && ch <= "9"))
+  ) {
+    createTable(rows, columns);
+    createTableBtn.remove();
+  } else {
     return alert("wrong input");
   }
-  if((rows >= 'a' && rows <= 'z') || (rows >= 'A' && rows <= 'Z ')){
-     return alert("wrong input");
-  }
-  createTable(rows, columns);
-  createTableBtn.remove();
 });
 
 function createTable(rows, columns) {
