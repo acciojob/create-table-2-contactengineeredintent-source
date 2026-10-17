@@ -1,1 +1,13 @@
 /*  your css code here. If applicable */
+body{
+  width:100vw;
+  height:100vh;
+}
+.box{
+  width:75%;
+  height:75%;
+}
+#myTable th,
+#myTable td {
+    border: 2px solid black;
+}
